@@ -3,7 +3,8 @@
  *
  * On mobile / remote clients the user needs to point to the desktop machine's
  * LAN IP instead of the default 127.0.0.1.  The chosen URL is persisted in
- * localStorage so it survives page reloads and PWA restarts.
+ * localStorage so it survives page reloads and PWA restarts.  The bridge must
+ * also list this page's origin in BRIDGE_ALLOWED_ORIGINS (see bridge/README.md).
  */
 
 import { useState, useCallback } from 'react'
@@ -178,7 +179,11 @@ export default function ServerConfig({
           }}
         >
           On mobile, enter your desktop's LAN IP, e.g.{' '}
-          <span style={{ color: '#888' }}>ws://192.168.1.x:18790</span>
+          <span style={{ color: '#888' }}>ws://192.168.1.x:18790</span>, and
+          start the bridge with{' '}
+          <span style={{ color: '#888' }}>
+            BRIDGE_ALLOWED_ORIGINS={window.location.origin}
+          </span>
         </div>
 
         {/* Connect button */}
