@@ -9,7 +9,7 @@
     "dev": "concurrently --names vite,bridge --prefix-colors cyan,yellow \"vite\" \"tsx bridge/server.ts\"",
     "dev:vite": "vite",
     "dev:electron": "concurrently --kill-others --names vite,electron --prefix-colors cyan,green \"vite\" \"node scripts/wait-for-vite.cjs\"",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/check-electron-assets.cjs",
     "build:electron": "pnpm build:electron:mac",
     "build:electron:mac": "pnpm build && node scripts/build-electron.cjs && electron-builder --mac zip",
     "build:electron:mac:dmg": "pnpm build && node scripts/build-electron.cjs && electron-builder --mac dmg",
