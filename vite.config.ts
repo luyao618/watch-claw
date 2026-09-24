@@ -8,6 +8,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Packaged Electron loads dist/index.html via file://, without a server root.
+  base: './',
   plugins: [
     react(),
     VitePWA({
