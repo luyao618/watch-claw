@@ -12,13 +12,14 @@
 
 ### Download Desktop App (Recommended)
 
-Go to the [Releases](https://github.com/luyao618/watch-claw-working/releases) page and download the latest version:
+Go to the [Releases](https://github.com/luyao618/watch-claw/releases) page and download the latest version:
 
 - **macOS**: `.dmg` installer or `.zip` archive
 
 The app auto-starts the built-in Bridge Server and connects to your running OpenClaw session. No Node.js or dev tools required.
 
 The desktop app supports:
+
 - **System tray** -- keeps running in the background after closing the window; restore anytime from the tray
 - **Always-on-top** -- pin the window so you can watch the character while you code
 - **Auto-reconnect** -- reconnects automatically after disconnection; seamlessly follows session switches
@@ -26,8 +27,8 @@ The desktop app supports:
 ### Run from Source
 
 ```bash
-git clone https://github.com/luyao618/watch-claw-working.git
-cd watch-claw-working
+git clone https://github.com/luyao618/watch-claw.git
+cd watch-claw
 pnpm install
 pnpm dev
 ```
@@ -59,28 +60,28 @@ The character moves between rooms based on what the OpenClaw agent is doing:
          +-------------------------------------------------+
 ```
 
-| What the AI is doing | Where the character goes | Emotion |
-| --- | --- | --- |
-| `web_search` / `web_fetch` | 🌙 Balcony | Curious |
-| `read` / `write` / `edit` / `grep` and other file ops | 📚 Study | Focused |
-| Download/install (`curl`, `pip install`, `npm install`...) | 📦 Warehouse | Curious |
-| Dev/build (`git`, `python`, `node`, `cargo`, `docker`...) | 🖥 Server Room | Focused |
-| Generic commands (`ls`, `echo`, etc.) | 🔧 Toolbox | Serious |
-| Text reply / thinking | 🛋 Office | Thinking |
-| Subagents / multi-session | 🏚 Basement | Thinking |
-| Delete files (`rm`, `trash`...) | 🗑 Trash | Serious |
-| Idle > 30s / session end | 🛏 Bedroom | Sleepy |
+| What the AI is doing                                       | Where the character goes | Emotion  |
+| ---------------------------------------------------------- | ------------------------ | -------- |
+| `web_search` / `web_fetch`                                 | 🌙 Balcony               | Curious  |
+| `read` / `write` / `edit` / `grep` and other file ops      | 📚 Study                 | Focused  |
+| Download/install (`curl`, `pip install`, `npm install`...) | 📦 Warehouse             | Curious  |
+| Dev/build (`git`, `python`, `node`, `cargo`, `docker`...)  | 🖥 Server Room           | Focused  |
+| Generic commands (`ls`, `echo`, etc.)                      | 🔧 Toolbox               | Serious  |
+| Text reply / thinking                                      | 🛋 Office                | Thinking |
+| Subagents / multi-session                                  | 🏚 Basement              | Thinking |
+| Delete files (`rm`, `trash`...)                            | 🗑 Trash                 | Serious  |
+| Idle > 30s / session end                                   | 🛏 Bedroom               | Sleepy   |
 
 ## Keyboard Controls
 
-| Key | Action |
-| --- | --- |
-| Arrow keys | Manually move character |
-| `Z` | Toggle full-house view |
-| `F` | Follow character |
-| `D` | Toggle dashboard |
-| `M` | Mute |
-| `+` / `-` or scroll | Zoom |
+| Key                 | Action                  |
+| ------------------- | ----------------------- |
+| Arrow keys          | Manually move character |
+| `Z`                 | Toggle full-house view  |
+| `F`                 | Follow character        |
+| `D`                 | Toggle dashboard        |
+| `M`                 | Mute                    |
+| `+` / `-` or scroll | Zoom                    |
 
 ## Features
 
