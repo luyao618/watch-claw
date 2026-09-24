@@ -12,13 +12,14 @@
 
 ### 下载桌面应用（推荐）
 
-前往 [Releases](https://github.com/luyao618/watch-claw-working/releases) 页面下载最新版本：
+前往 [Releases](https://github.com/luyao618/watch-claw/releases) 页面下载最新版本：
 
 - **macOS**: `.dmg` 安装包或 `.zip` 压缩包
 
 打开应用后，它会自动启动内置的 Bridge Server 并连接本地正在运行的 OpenClaw 会话。无需安装 Node.js 或任何开发工具。
 
 桌面应用支持：
+
 - **系统托盘** -- 关闭窗口后仍在后台运行，随时从托盘恢复
 - **窗口置顶** -- 可设为始终在最前，边写代码边看角色动态
 - **自动重连** -- 断连后自动重连，切换 OpenClaw 会话时无缝衔接
@@ -26,8 +27,8 @@
 ### 从源码运行
 
 ```bash
-git clone https://github.com/luyao618/watch-claw-working.git
-cd watch-claw-working
+git clone https://github.com/luyao618/watch-claw.git
+cd watch-claw
 pnpm install
 pnpm dev
 ```
@@ -59,28 +60,28 @@ OpenClaw 执行工具  -->  会话日志 (JSONL)  -->  Bridge Server 推送  -->
          +-------------------------------------------------+
 ```
 
-| AI 在做什么 | 角色去哪 | 表情 |
-| --- | --- | --- |
-| `web_search` / `web_fetch` | 🌙 阳台 | 好奇 |
-| `read` / `write` / `edit` / `grep` 等文件操作 | 📚 书房 | 专注 |
-| 下载安装（`curl`, `pip install`, `npm install`...） | 📦 仓库 | 好奇 |
-| 编程构建（`git`, `python`, `node`, `cargo`, `docker`...） | 🖥 机房 | 专注 |
-| 通用命令（`ls`, `echo` 等） | 🔧 工具间 | 严肃 |
-| 回复消息 / 思考中 | 🛋 办公室 | 思考 |
-| 子代理 / 多会话协作 | 🏚 地下室 | 思考 |
-| 删除文件（`rm`, `trash`...） | 🗑 垃圾桶 | 严肃 |
-| 空闲超过 30 秒 / 会话结束 | 🛏 卧室 | 困倦 |
+| AI 在做什么                                               | 角色去哪  | 表情 |
+| --------------------------------------------------------- | --------- | ---- |
+| `web_search` / `web_fetch`                                | 🌙 阳台   | 好奇 |
+| `read` / `write` / `edit` / `grep` 等文件操作             | 📚 书房   | 专注 |
+| 下载安装（`curl`, `pip install`, `npm install`...）       | 📦 仓库   | 好奇 |
+| 编程构建（`git`, `python`, `node`, `cargo`, `docker`...） | 🖥 机房   | 专注 |
+| 通用命令（`ls`, `echo` 等）                               | 🔧 工具间 | 严肃 |
+| 回复消息 / 思考中                                         | 🛋 办公室 | 思考 |
+| 子代理 / 多会话协作                                       | 🏚 地下室 | 思考 |
+| 删除文件（`rm`, `trash`...）                              | 🗑 垃圾桶 | 严肃 |
+| 空闲超过 30 秒 / 会话结束                                 | 🛏 卧室   | 困倦 |
 
 ## 键盘操作
 
-| 按键 | 功能 |
-| --- | --- |
-| 方向键 | 手动控制角色移动 |
-| `Z` | 切换全屋视图 |
-| `F` | 镜头跟随角色 |
-| `D` | 显示/隐藏状态面板 |
-| `M` | 静音 |
-| `+` / `-` 或滚轮 | 缩放 |
+| 按键             | 功能              |
+| ---------------- | ----------------- |
+| 方向键           | 手动控制角色移动  |
+| `Z`              | 切换全屋视图      |
+| `F`              | 镜头跟随角色      |
+| `D`              | 显示/隐藏状态面板 |
+| `M`              | 静音              |
+| `+` / `-` 或滚轮 | 缩放              |
 
 ## 开发者命令
 
